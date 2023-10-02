@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator </title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            font-family:'Poppins',sans-serif;
+            box-sizing:border-box;
+        }
+        .container{
+            width:100%;
+            height:100vh;
+            background: #d37d0d;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .calculator{
+            background:#010813;
+            padding:20px;
+            border-radius:10px;
+        }
+        .calculator form input{
+            border:0;
+            outline:0;
+            width:50px;
+            height:50px;
+            border-radius:20px;
+            box-shadow: -9px -9px 15px rgba(255,255,255,0.1),7px 7px 15px rgba(0,0,0,0.2);
+            background: transparent;
+
+            font-size: 30px;
+            color:blue;
+            cursor:pointer;
+            margin:10px;
+
+        }
+       form .fmb{
+        display:flex;
+        justify-content:flex-end;
+        margin:10px 0;
+        }
+        form .fmb input{
+            text-align:right;
+            flex:1;
+            font-size:50px;
+            box-shadow:none;
+        }
+        form input.operator{
+            width: 150px;
+
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class ="calculator">
+            <form>
+                <div class="fmb">
+                    <input type="text" name = "fmb">
+                </div>
+                <div>
+                    <input type="button" value ="AC"onclick = "fmb.value =' ' ">
+                    <input type="button" value="DE"onclick = "fmb.value =  fmb.value.toString().slice(0,-1) ">
+                    <input type="button" value ="."onclick = "fmb.value +='.' ">
+                    <input type="button" value ="/"onclick = "fmb.value +='/' ">
+                </div>
+                <div>
+                    <input type="button" value ="7"onclick = "fmb.value +='7' ">
+                    <input type="button" value="8"onclick = "fmb.value +='8' ">
+                    <input type="button" value ="9"onclick = "fmb.value +='9' ">
+                    <input type="button" value ="*"onclick = "fmb.value +='*' ">
+                </div>
+                <div>
+                    <input type="button" value ="4"onclick = "fmb.value +='4' ">
+                    <input type="button" value="5"onclick = "fmb.value +='5' ">
+                    <input type="button" value ="6"onclick = "fmb.value +='6' ">
+                    <input type="button" value ="-"onclick = "fmb.value +='-' ">
+                </div>
+                <div>
+                    <input type="button" value ="1"onclick = "fmb.value +='1' ">
+                    <input type="button" value="2"onclick = "fmb.value +='2' ">
+                    <input type="button" value ="3"onclick = "fmb.value +='3' ">
+                    <input type="button" value ="+"onclick = "fmb.value +='+' ">
+                </div>
+                <div>
+                    <input type="button" value ="00"onclick = "fmb.value +='00' ">
+                    <input type="button" value="0"onclick = "fmb.value +='0' ">
+                    
+                    <input type="button" value ="="onclick = "fmb.value =eval(fmb.value)"  class="operator">
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
