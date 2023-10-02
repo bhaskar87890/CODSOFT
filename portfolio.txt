@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        header{
+            width:100%;
+            height:100vh;
+            background:url(background.jpg);
+            background-size: 100%,cover;
+            
+            background-repeat:no-repeat;
+        }
+        .logo{
+            color:indianred;
+            font-size:40px;
+            padding-left:100px;
+
+            
+        }
+        .menu a{
+            color:white;
+            text-decoration:none;
+            padding:10px 20px;
+            margin:5px;
+            font-size:20px;
+            font-weight:bold;
+        }
+        .menu a:hover{
+            background:indianred;
+            transition:0.4s;
+        }
+        .menu{
+            margin-right:100px;
+        }
+        nav{
+            width:100%;
+            height:70px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .txt{
+            color:white;
+            margin-top:100px;
+            margin-left:100px;
+            max-width:450px;
+        }
+        .txt h1{
+            font-size:50px;
+            margin:10px 0px;
+        }
+        .txt p{
+            font-size:25px;
+        }
+        .btn{
+            border:none;
+            outline:none;
+            color:white;
+            background:indianred;
+            padding:10px;
+            margin-top:20px;
+        }
+        #about{
+            padding:100px 50px;
+        }
+        .section-info{
+            font-weight:bold;
+            text-align:center;
+        }
+        .section-info h1{
+            font-size:40px;
+        }
+        .section-info p{
+            font-size:20px;
+            color:indianred;
+        }
+        .about-row{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .about-lef-col{
+            flex-basis:50%;
+        }
+        .about-lef-col img{
+            width:100%;
+            padding:50px;
+        }
+        .about-rig-col{
+            flex-basis:50%;
+
+        }
+        #p-title{
+            font-size:25px;
+            font-weight:bold;
+
+        }
+        .about-rig-col p{
+            font-size:25px;
+            text-align: justify;
+        }
+        .c-btn{
+            border:none;
+            outline:none;
+            color:white;
+            background:indianred;
+            padding:10px;
+            margin-top:20px;
+        }
+        
+        #Skills{
+           padding:100px 50px;
+           background-image: url(skills.jpg);
+           background-size:cover ;
+           color:white;
+
+        }
+        .skills-row{
+            display:flex;
+            align-items: center;
+            justify-content:center;
+            flex-wrap:wrap;
+            background:rgb(40,50,60);
+            padding:50px;
+        }
+        .skills-left-col{
+            flex-basis:50%;
+
+        }
+        .skills-rig-col{
+            flex-basis:50%;
+            text-align:justify;
+
+        }
+        .skills-left-col p{
+            font-size:25px;
+
+         }
+         progress{
+            width:80%;
+         }
+         .progress-div {
+            width:70%;
+            margin:auto;
+         }
+         .progress-div p{
+            margin-bottom:10px;
+            font-size:20px;
+            padding-left:80px;
+            text-align:justify;
+         }
+         #services{
+            padding:100px 50px;
+         }
+         .services-row{
+            display:flex;
+            justify-content:space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+         }
+         .services-box{
+            flex-basis:25%;
+            text-align: center;
+            box-shadow:3px 5px 7px grey;
+            padding:20px;
+            margin-top:20px;
+        }
+        .services-box:hover{
+            background:indianred;
+
+            transition:0.4s;
+
+        }
+         .services-box img{
+            width:70%;
+         }
+         .contactus{
+            min-height:100vh;
+            background-color:indianred;
+            padding:50px;
+            text-align:center;
+            
+            
+         }
+         .container{
+            max-width:800px;
+            margin:0 auto;
+         }
+         .container h1{
+            font-size:35px;
+            margin-bottom:40px;
+            
+         }
+         .contact-wrapper{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap:30px;
+         }
+         .contact-form{
+            text-align:left;
+         }
+         .contact-form h3{
+            font-size:24px;
+            margin-bottom:20px;
+         }
+         .form-group{
+            margin-bottom:20px;
+         }
+         input,textarea{
+            width:100%;
+            padding:12px;
+            border-radius:8px;
+            border:none;
+            background-color:white;
+            color:black;
+         }
+         input:focus,textarea:focus{
+            outline:none;
+            box-shadow:0 0 7px black;
+         }
+         button{
+            display:inline-block;
+            padding:10px 20px;
+            background-color:aquamarine;
+            border:none;
+            cursor:pointer;
+            transition: 0.3s ease;
+         }
+         button:hover{
+            background-color:yellowgreen;
+         }
+         .contact-information{
+            text-align:left;
+         }
+         .contact-information h3{
+            font-size:20px;
+            margin-bottom:20px;
+            color:black;
+
+         }
+         .contact-information p{
+            margin-bottom:10px;
+            color:black;
+         }
+         .contact-information i{
+        
+            margin-right: 10px;
+         }
+         
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#Skills">Skills</a>
+                <a href="#services">Services</a>
+                <a href="#contactus">Contact</a>
+            </div>
+        </nav>
+        <div class="txt">
+            <p>Hello, I am</p>
+            <h1>Bhaskar Samanta</h1>
+            <p>And I am a Front-end developer </p>
+            <button class="btn">Click Here for More!</button>
+
+        </div>
+    
+
+    </header>
+    <section id="about">
+        <div class="section-info">
+            <h1>About</h1>
+            <p>Who I am?</p>
+        </div>
+
+    <div class="about-row">
+        <div class="about-lef-col">
+            <img src="about2.jpg">
+        </div>
+        <div class="about-rig-col">
+            <p id = "p-title">
+                Hello , I'm Bhaskar & I'm a front-end web developer. </p>
+            <p> A dedicated software developer with a passion for crafting clean and efficient code. Possesses a strong
+                foundation in programming languages like Python and C, excelling at transforming complex problems into
+                elegant solutions. Demonstrated expertise spans web development, system administration, and network
+                administration, ensuring a comprehensive approach to software projects. Thrives on continuous learning and
+                collaborating with cross-functional teams to create impactful software solutions. Aiming to contribute to the
+                tech industry's future by building innovative solutions one line of code at a time.
+            </p>
+            <button class="c-btn">Click For More!</button>
+            
+        </div>
+    </div>
+</section>
+<section id="Skills">
+    <div class="section-info">
+        <h1>Skills</h1>
+        <p>Who I am?</p>
+    </div>
+    <div class="skills-row">
+        <div class="skills-left-col">
+            <p>A dedicated software developer with a passion for crafting clean and efficient code. Possesses a strong
+                foundation in programming languages like Python and C, excelling at transforming complex problems into
+                elegant solutions. Demonstrated expertise spans web development, system administration, and network
+                administration, ensuring a comprehensive approach to software projects. Thrives on continuous learning and
+                collaborating with cross-functional teams to create impactful software solutions. Aiming to contribute to the
+                tech industry's future by building innovative solutions one line of code at a time.</p>
+                <button class="c-btn">Read More</button>
+                
+        </div>
+        <div class="skills-rig-col">
+            <div class="progress-div">
+                <p>
+                <span>HTML</span><br>
+                <progress value ="90" max ="100"></progress>
+                <span>90%</span>
+                </p>
+                <p>
+                    <span>CSS</span><br>
+                    <progress value ="70" max ="100"></progress>
+                    <span>70%</span>
+                    </p>
+                    <p>
+                    <span>JAVASCRIPT</span><br>
+                    <progress value ="40" max ="100"></progress>
+                    <span>40%</span>
+                    </p>
+                    
+
+                    <p>
+                        <span>C</span><br>
+                        <progress value ="80" max ="100"></progress>
+                        <span>80%</span>
+                        </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="services">
+    <div class="section-info">
+        <h1>Services</h1>
+        <p>What We Provide</p>
+    </div>
+    <div class="services-row">
+        <div class="services-box">
+            <img src="services.jpg">
+            <h2>Web design</h2>
+            <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design; user interface design (UI design); authoring, including standardised code and proprietary software; user experience design (UX design); and search engine optimization.</p>
+        </div>
+    
+    <div class="services-box">
+        <img src="services.jpg">
+        <h2>Coding </h2>
+        <p>Coding is the process of performing particular computations, usually by designing and building executable computer programs. Programming involves tasks such as analysis, generating algorithms, profiling algorithms' accuracy and resource consumption, and the implementation of algorithms .</p>
+    </div>
+    <div class="services-box">
+        
+        <img src="services.jpg">
+        <h2>Front-end Web development</h2>
+        <p>A Front-End Developer is someone who creates websites and web applications.The Front-End Developer creates things that the user sees.It is a popular job, and everyone can become a Front-End Developer.The main responsibility of a Front-End Developer is the User interface.</p>
+    </div>
+    </div>
+
+</section>
+<section class="contactus">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <h3>Send me a message</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="e-mail" name="Email" placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            
+            <div class="contact-information">
+                <h3>Contact Information</h3>
+                <p><i class="fa fa-phone"></i>+91 912XXXXXXX</p>
+                <p><i class ="fa fa-envelope"></i>bhaskarsamanta431@gmail.com</p>
+                <p><i class="fa fa-map-marker"></i> Kolkata, West Bengal, India</p>
+            </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    
+        
+                
+            
+
+    
+    
+</section>
+
+</body>
+</html>
